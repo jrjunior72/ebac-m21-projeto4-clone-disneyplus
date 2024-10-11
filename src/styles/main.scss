@@ -3,6 +3,8 @@
 //importando estilos
 @use 'hero'; 
 @use 'variaveis';
+@use 'shows';
+@use 'plans';
 
 @font-face {
     font-family: Avenir;
@@ -21,12 +23,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Avenir, sans-serif; 
+    list-style: none;
 }
 
 // estilizando 
-body {
+body { // não se aplica a inputs e botões
     background-color: variaveis.$corDeFundo;
-    font-family: Avenir, sans-serif;
 }
 
 // mixin
@@ -69,4 +72,17 @@ body {
     @include text(18px);
     color: variaveis.$corTextoSecundario;
     text-decoration: underline;
+}
+
+.button {
+    display: block;
+    width: 100%;
+    height: 60px;
+    font-size: 18px;
+    color: variaveis.$corTextoSecundario;
+    background-color: #6421ff;
+    text-transform: uppercase;
+    border-radius: 4px;
+    margin-top: 2vw;
+    margin-bottom: 8px;
 }
